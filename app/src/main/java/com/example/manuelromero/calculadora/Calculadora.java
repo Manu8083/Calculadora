@@ -20,11 +20,9 @@ public class Calculadora extends AppCompatActivity implements OnClickListener{
     }
 
     public void onClick(View vista){
-
         EditText oper1, oper2;
         oper1 = (EditText)findViewById(R.id.Num1); // se obtiene los datos del usuario
         oper2 = (EditText)findViewById(R.id.Num2);
-
 
         TextView resultado = (TextView)findViewById(R.id.ViewResultado); // aqui se mostrar el resultado
         try{
@@ -37,8 +35,22 @@ public class Calculadora extends AppCompatActivity implements OnClickListener{
             resultado.setText("Los datos solo deben ser numeros"); //en caso de error se imprime esto
         };
 
+    }
+    public void Dividir(View v){
+        EditText oper1, oper2;
+        oper1 = (EditText)findViewById(R.id.Num1); // se obtiene los datos del usuario
+        oper2 = (EditText)findViewById(R.id.Num2);
 
+        TextView resultado = (TextView)findViewById(R.id.ViewResultado); // aqui se mostrar el resultado
+        try{
 
+            double a = Double.valueOf(oper1.getText().toString()).doubleValue(); //los datos agregador por el usuario se convierten en interger para poder sumar
+            double b = Double.valueOf(oper2.getText().toString()).doubleValue(); //los datos agregador por el usuario se convierten en interger para poder sumar
+
+            resultado.setText("Resultado : "+ (a / b)); //Se imprime el resultado
+        }catch (Exception e){
+            resultado.setText("Los datos solo deben ser numeros"); //en caso de error se imprime esto
+        };
     }
 
 }
