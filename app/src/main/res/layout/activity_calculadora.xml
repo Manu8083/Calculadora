@@ -93,12 +93,11 @@
         android:id="@+id/ViewResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/Restar"
-        android:layout_marginTop="60dp"
         android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/Num2"
+        android:layout_toStartOf="@+id/button" />
 
     <EditText
         android:layout_width="wrap_content"
