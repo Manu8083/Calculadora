@@ -37,16 +37,30 @@
         android:text="Sumar"
         android:id="@+id/BotonSumar"
         android:layout_below="@+id/Num2"
-        android:layout_toEndOf="@+id/ViewResultado" />
+
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="6dp" />
+
+    <Button
+        android:id="@+id/Restar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restar"
+        android:onClick="Restar"
+        android:layout_marginEnd="33dp"
+        android:layout_below="@+id/ViewResultado"
+        android:layout_toStartOf="@+id/BotonDividir" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dividir"
         android:onClick="Dividir"
         android:id="@+id/BotonDividir"
-        android:layout_below="@+id/Num2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="39dp" />
+        android:layout_marginStart="32dp"
+        android:layout_above="@+id/ViewResultado"
+        android:layout_toEndOf="@+id/ViewResultado"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
