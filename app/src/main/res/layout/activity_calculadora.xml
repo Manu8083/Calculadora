@@ -7,39 +7,47 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimary"
     tools:context="com.example.manuelromero.calculadora.Calculadora">
 
     <EditText
+        android:id="@+id/Num1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/Num1"
-        android:inputType="number"
         android:layout_below="@+id/Titulo"
-        android:layout_marginTop="65dp"
-        android:layout_alignEnd="@+id/Num2"
-        android:layout_toEndOf="@+id/ViewResultado"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:ems="16"
+
+        android:hint="Ingrese primer numero"
+        android:inputType="number"
+        android:textColor="@android:color/white" />
 
     <EditText
+        android:id="@+id/Num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/Num2"
+        android:layout_alignStart="@+id/Num1"
         android:layout_below="@+id/Num1"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:inputType="number" />
+        android:layout_marginTop="10dp"
+        android:ems="16"
+        android:hint="Ingrese segundo numero"
+        android:inputType="number"
+
+        android:textColor="@android:color/white" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sumar"
+        android:textSize="16sp"
         android:id="@+id/BotonSumar"
-        android:layout_below="@+id/Num2"
+        android:theme="@style/RaisedButtonDark"
 
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="6dp" />
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="29dp"
+        android:layout_below="@+id/Num2"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/Restar"
@@ -47,39 +55,60 @@
         android:layout_height="wrap_content"
         android:text="Restar"
         android:onClick="Restar"
-        android:layout_marginEnd="33dp"
-        android:layout_below="@+id/ViewResultado"
-        android:layout_toStartOf="@+id/BotonDividir" />
+        android:theme="@style/RaisedButtonDark"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/BotonDiv"
+        android:layout_alignBottom="@+id/BotonDiv"
+        android:layout_alignStart="@+id/BotonSumar" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dividir"
-        android:onClick="Dividir"
-        android:id="@+id/BotonDividir"
-        android:layout_marginStart="32dp"
-        android:layout_above="@+id/ViewResultado"
-        android:layout_toEndOf="@+id/ViewResultado"
-        android:layout_marginBottom="8dp" />
+        android:text="Multiplicar"
+        android:onClick="Multiplicar"
+        android:id="@+id/BotonDiv"
+        android:theme="@style/RaisedButtonDark"
+        android:textSize="16sp"
 
-    <TextView
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="48dp" />
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
+
+        android:textSize="16sp"
+        android:onClick="Dividir"
+        android:text="Dividir"
+        android:theme="@style/RaisedButtonDark"
+        android:layout_alignBaseline="@+id/BotonSumar"
+        android:layout_alignBottom="@+id/BotonSumar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="61dp" />
+
+    <TextView
         android:id="@+id/ViewResultado"
-        android:layout_below="@+id/BotonSumar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Restar"
+        android:layout_marginTop="60dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculadora Universidad Manuela Beltran - Manuel Romero y Carlos Andres"
+        android:text="Calculadora Universidad Manuela Beltran  Manuel Romero y Carlos Andres"
+        android:textAlignment="center"
         android:id="@+id/Titulo"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/ViewResultado"
-        android:background="#f0e0e0"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
