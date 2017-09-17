@@ -70,4 +70,20 @@ public class Calculadora extends AppCompatActivity implements OnClickListener{
         };
     }
 
+    public void Multiplicar(View v){
+        EditText oper1, oper2;
+        oper1 = (EditText)findViewById(R.id.Num1); // se obtiene los datos del usuario
+        oper2 = (EditText)findViewById(R.id.Num2);
+
+        TextView resultado = (TextView)findViewById(R.id.ViewResultado); // aqui se mostrar el resultado
+        try{
+
+            int a = Integer.parseInt(oper1.getText().toString()); //los datos agregador por el usuario se convierten en interger para poder sumar
+            int b = Integer.parseInt(oper2.getText().toString()); //los datos agregador por el usuario se convierten en interger para poder sumar
+
+            resultado.setText("Resultado : " + (a * b)); //Se imprime el resultado
+        }catch (Exception e){
+            resultado.setText("Los datos solo deben ser numeros"); //en caso de error se imprime esto
+        };
+    }
 }
